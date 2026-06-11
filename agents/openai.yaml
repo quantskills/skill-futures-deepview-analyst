@@ -1,0 +1,4 @@
+interface:
+  display_name: "Futures DeepView Analyst"
+  short_description: "Analyze futures positions, basis, and curves"
+  default_prompt: "Use $futures-deepview-analyst to analyze RB dominant contract broker positions, basis, term structure, warehouse receipts, and arbitrage signals."

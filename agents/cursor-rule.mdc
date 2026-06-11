@@ -1,0 +1,24 @@
+---
+description: Use the Futures DeepView Analyst skill for Pandadata futures position, basis, inventory, term-structure, and arbitrage analysis.
+alwaysApply: false
+---
+
+# Futures DeepView Analyst Skill
+
+When the user asks for futures broker-position analysis, 主力席位动向, 持仓博弈, 基差, 期限结构, 仓单库存, 虚实盘比, 现货利润, 跨期套利, or a futures DeepView report, use the local skill package.
+
+Preferred local project path:
+
+```text
+.cursor/skills/futures-deepview-analyst
+```
+
+Workflow:
+
+1. Read `.cursor/skills/futures-deepview-analyst/SKILL.md`.
+2. For multi-module reports, also read `.cursor/skills/futures-deepview-analyst/references/analysis-playbook.md`.
+3. Use the Pandadata API skill at `.cursor/skills/pandadata-api` to verify exact `panda_data` method parameters and fields before calling any API.
+4. Normalize the target as variety, symbol, dominant contract, or full-market scan.
+5. Smoke-test each planned method on a small date range or one trade date before expanding.
+6. Report in Chinese by default, cite method names, query parameters, latest data date, and separate data facts from inference.
+7. Do not issue direct trading instructions. If the user asks for strategy code or order logic, hand off after the data conclusions are clear.
