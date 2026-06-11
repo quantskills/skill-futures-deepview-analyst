@@ -1,5 +1,7 @@
 # 🔩 Futures DeepView Analyst Skill
 
+**简体中文** | [English](README.en.md)
+
 > 把"分析螺纹钢席位博弈""看豆粕期限结构和仓单"这类自然语言请求，转成 Pandadata 期货 DeepView 数据调用计划，输出事实与推断分离的中文研判报告。
 
 <p align="center">
@@ -19,7 +21,7 @@
 
 它解决的核心问题：DeepView 数据接口多、口径杂、单日快照大，直接让 Agent 裸调容易**编错参数、跨日拼接出伪信号、把推断说成事实**。本技能内置了请求分诊、小样本试调、同日对齐、证据链标注四道约束。
 
-> 数据契约一律来自姊妹技能 [`pandadata-api`](../skill-pandadata-api)；本技能负责"怎么分析"，不负责"接口长什么样"。
+> 数据契约一律来自姊妹技能 [`pandadata-api`](https://github.com/quantskills/skill-pandadata-api)；本技能负责"怎么分析"，不负责"接口长什么样"。
 
 ---
 
