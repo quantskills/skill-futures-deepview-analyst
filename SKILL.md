@@ -2,6 +2,13 @@
 name: futures-deepview-analyst
 description: "基于 Pandadata 期货 DeepView 接口做期货品种、主力合约和跨期结构的综合研判，覆盖席位净持仓保证金、席位建仓、盈亏排行、多空比、资金流、基差、期限结构、仓单库存、虚实盘比、现货利润和跨期套利。Use when the user asks for 期货席位分析、持仓博弈、主力席位动向、基差或期限结构监控、仓单库存跟踪、虚实盘比、跨期套利扫描、期货品种综合分析, or a futures DeepView report for a variety or contract."
 license: GPL-3.0-only
+metadata:
+  organization: QuantSkills
+  organization_url: https://github.com/quantskills
+  repository: skill-futures-deepview-analyst
+  repository_url: https://github.com/quantskills/skill-futures-deepview-analyst
+  project_type: skill
+  collection: futures-deepview-analyst
 ---
 
 # Futures DeepView Analyst
