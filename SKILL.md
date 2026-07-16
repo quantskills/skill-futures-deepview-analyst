@@ -36,6 +36,44 @@ quantSkills:
   - skill-pandadata-api
 ---
 
+```json qsh-form
+{
+  "version": 1,
+  "task": {
+    "placeholder": "补充分析范围、时间窗口、指定合约或希望深挖的问题"
+  },
+  "fields": [
+    {
+      "key": "variety",
+      "label": "品种或合约",
+      "type": "text",
+      "required": true,
+      "placeholder": "如：螺纹钢 RB、沪铜 CU、IF 主力"
+    },
+    {
+      "key": "focus",
+      "label": "分析重点",
+      "type": "select",
+      "default": "comprehensive",
+      "options": [
+        { "value": "comprehensive", "label": "综合研判" },
+        { "value": "broker", "label": "席位持仓博弈" },
+        { "value": "structure", "label": "基差与期限结构" },
+        { "value": "inventory", "label": "仓单库存与现货" },
+        { "value": "arbitrage", "label": "跨期套利扫描" }
+      ]
+    },
+    {
+      "key": "date",
+      "label": "分析日期",
+      "type": "date",
+      "help": "留空时使用最新可用交易日"
+    }
+  ],
+  "prompt_template": "{{#task}}任务与材料：\n{{task}}\n\n{{/task}}{{#attachments}}用户上传的材料（已放入工作区）：\n{{attachments}}\n\n{{/attachments}}请对期货品种或合约 {{variety}} 做 DeepView {{focus}}。{{#date}}以 {{date}} 为分析日期。{{/date}}确认品种、合约和同日数据口径，按需覆盖席位净持仓与建仓、盈亏排行、多空比、资金流、基差、期限结构、仓单库存、虚实盘比、现货利润及跨期套利；分离事实与推断，标注方法、参数和数据截止日，输出中文报告。"
+}
+```
+
 # Futures DeepView Analyst
 
 将“分析螺纹钢席位博弈”“看豆粕期限结构和仓单”“扫描哪些品种有跨期套利机会”这类请求，转成 Pandadata 期货 DeepView 数据调用计划，并输出结构化中文研判报告。
